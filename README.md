@@ -136,3 +136,9 @@ To make a template base work globally, one trick is to create a separate app wit
 put the `my_base.html` into the root of that templates folder, rename it to `base.html`, and add that app at the top of the INSTALLED_APPS list.
 That way, it will still extend the `base_sceleton.html` from the supercharged app with all the niceties, but your navbars and footers will apply 
 to all apps extending `base.html` (which is the de facto standard for django).
+
+**OR** you can skip all that and run
+
+`$ python manage.py add_global_templates`
+
+Add `"global_templates"` at the top of your INSTALLED_APPS and adjust the `base.html` inside the templates folder of that app.
