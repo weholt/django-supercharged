@@ -26,3 +26,9 @@ in the global `urls.py` yourself at the moment. Now run:
 `$ python manage.py migrate`
 
 and head over to the admin to see it all in action. Not that saved you a lot of typing, ie. time. ;-)
+
+## The Service layer aka services.py
+
+This is a controversial topic in Django, but I agree with the Style Guide above, and think putting more elaborate queries and operations into a separate layer in the project, in our case `services.py`.
+
+Supercharged comes with an optional implementation strategy which furthers abstracts some of the logic behind a `ServiceProcessResult`. 
