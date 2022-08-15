@@ -94,3 +94,22 @@ Available themes are:
 - vapor
 - yeti
 - zephyr
+
+## Extending the templates
+
+Most likely you'll want to add a bit more flesh to the base template of your site. Create your own `my_base.html` in the root of the templates folder of your app, extend the `base_sceleton.html` like so:
+
+```
+{% extends 'base_sceleton.html' %}
+
+{% block page %}
+<h2>Something</h2>
+<!-- this will be repeated on every page extending my_base.html -->
+{% block content %}
+
+{% endblock content %}
+
+{% endblock page%}
+```
+
+and then just extend `my_base.html` in the templates of your app instead of `base.html`.
