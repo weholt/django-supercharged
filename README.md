@@ -18,8 +18,10 @@ This will create a new app called mega_app with all the bells and whistles descr
 `$ python manage.py crud_model mega_app Employee -f name:str -f age:int -f email:email -f active:bool`
 
 This will create a new model called Employee with the following fields name, age, email & active. It will create a folder in the templates folder of mega_app, with a sub-folder called employee,
-containing base templates for CRUD-operations related to that model. It will add url entries to the app-related `urls.py`, add it to the local `admin.py`. *NOTE! You'll have to add the include statement
-in the global `urls.py` yourself at the moment*. Now run:
+containing base templates for CRUD-operations related to that model. It will add url entries to the app-related `urls.py`, add it to the local `admin.py`. **NOTE! You'll have to add the include statement
+in the global `urls.py` yourself at the moment**. 
+
+Now run:
 
 `$ python manage.py makemigrations `
 
