@@ -1,9 +1,7 @@
 from dataclasses import dataclass, field
-from doctest import UnexpectedException
-from email.message import Message
 from enum import Enum, auto
 from inspect import isclass
-from typing import Any, Dict, List
+from typing import Dict
 
 from django.contrib import messages
 from django.shortcuts import render
@@ -69,10 +67,10 @@ class ServiceException(Exception):
 
     def level_to_message(self, level):
         return {
-            self.info: messages.INFO,
-            self.debug: messages.DEBUG,
-            self.warning: messages.WARNING,
-            self.critical: messages.constants.ERROR,
+            self.level.info: messages.INFO,
+            self.level.debug: messages.DEBUG,
+            self.level.warning: messages.WARNING,
+            self.level.critical: messages.constants.ERROR,
         }[level]
 
 
@@ -81,10 +79,10 @@ class ServiceExceptionHandler:
 
     def __init__(
         self,
-        next_url: str = None,
-        button_text: str = None,
-        alternative_url: str = None,
-        alternative_button_text: str = None,
+        next_url: str = "",
+        button_text: str = "",
+        alternative_url: str = "",
+        alternative_button_text: str = "",
         template: str = "service_message.html",
     ):
         self.next_url = next_url
