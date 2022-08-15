@@ -131,3 +131,8 @@ and then just extend `my_base.html` in the templates of your app instead of `bas
 {% block content %}
 {% endblock %}
 ```
+
+To make a template base work globally, one trick is to create a separate app with a templates folder, 
+put the `my_base.html` into the root of that templates folder, rename it to `base.html`, and add that app at the top of the INSTALLED_APPS list.
+That way, it will still extend the `base_sceleton.html` from the supercharged app with all the niceties, but your navbars and footers will apply 
+to all apps extending `base.html` (which is the de facto standard for django).
