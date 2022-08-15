@@ -10,6 +10,7 @@ its own `urls.py` file for urlpatterns, which can then be included in the global
 
 Let's show an example:
 
+
 `$ python manage.py startbigapp mega_app`
 
 This will create a new app called mega_app with all the bells and whistles described above. To add a model to that app, run:
