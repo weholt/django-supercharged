@@ -31,6 +31,6 @@ and head over to the admin to see it all in action. Now that saved you a lot of 
 
 ## The Service layer aka services.py
 
-This is a controversial topic in Django, but I agree with the Style Guide above, and think putting more elaborate queries and operations into a separate layer in the project, in our case `services.py`.
+This is a controversial topic in Django, but I agree with the Style Guide above, and think it's a good idea to put more elaborate queries and operations into a separate layer in the project, in our case `services.py`.
 
 Supercharged comes with an optional implementation strategy which furthers abstracts some of the logic behind a `ServiceProcessResult`. 
