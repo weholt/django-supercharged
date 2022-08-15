@@ -1,5 +1,15 @@
 # django-supercharge
 
+## Getting started
+
+To install:
+
+`pip install git+https://github.com/weholt/django-supercharged`
+
+Then add `supercharged` to your INSTALLED_APPS list in `settings.py`.
+
+## About
+
 Supercharge is a reusable Django app meant to help development, heavy influenced by the Django Style Guide (https://github.com/HackSoftware/Django-Styleguide), by providing a few management commands:
 
 - `startbigapp`: which creates an app according to the mentioned style guide, with `selectors.py` for ORM queries, and `services.py` for more elaborate processing and operations. All views and models are
@@ -8,8 +18,8 @@ its own `urls.py` file for urlpatterns, which can then be included in the global
 
 - `crud_model`: creates the base for a lot of the required files related to a model, including templates & views.
 
-Let's show an example:
 
+## An example
 
 `$ python manage.py startbigapp mega_app`
 
