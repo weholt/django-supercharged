@@ -115,11 +115,12 @@ Most likely you'll want to add a bit more flesh to the base template of your sit
     <!-- here comes the dynamic content >
     {% endblock content %}
 
-<!-- 
+    <!-- 
 
-    This part will be repated and can hold stuff like footers etc. 
+        This part will be repated and can hold stuff like footers etc. 
 
--->
+    -->
+    
 {% endblock page%}
 ```
 
