@@ -8,7 +8,7 @@ setup(
     author="Thomas Weholt",
     author_email="thomas@weholt.org",
     license="MIT",
-    install_requires=["django", "django-click", "black", "isort"],
+    install_requires=["django", "django-click", "black", "isort", "cookiecutter"],
     packages=find_packages(),
     include_package_data=True,
     entry_points={
