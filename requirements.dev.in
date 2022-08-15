@@ -1,0 +1,15 @@
+black
+isort
+mypy
+flake8
+flake8-isort
+pre-commit
+pytest
+pytest-sugar
+coverage
+factory-boy
+pip-tools
+twine
+setuptools
+wheel
+django-click
