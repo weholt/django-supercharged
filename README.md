@@ -1,7 +1,5 @@
 # django-supercharge
 
-## Getting started
-
 To install:
 
 `pip install git+https://github.com/weholt/django-supercharged`
