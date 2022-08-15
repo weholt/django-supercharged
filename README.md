@@ -103,7 +103,8 @@ Most likely you'll want to add a bit more flesh to the base template of your sit
 {% extends 'base_sceleton.html' %}
 
 {% block page %}
-<!-- The content placed before the next block will be repeated on every page. This is a nice place for a navbar for instance -->
+<!-- The content placed before the next block will be repeated on every page. 
+     This is a nice place for a navbar for instance -->
 
     {% block content %}
     <!-- here comes the dynamic content >
