@@ -6,6 +6,10 @@ To install:
 
 Then add `supercharged` to your INSTALLED_APPS list in `settings.py`.
 
+**NOTE! This is a very crude method of adding a bunch of files and functionality at once. The code is still under heavy development, and all the code generated needs manual control afterwards. 
+It's just meant to save you time for operations you do often when it comes to creating apps and then re-organizing it to fit a bigger project, and to speed up creating CRUD-base for your models.**
+
+
 ## About
 
 Supercharge is a reusable Django app meant to help development, heavy influenced by the Django Style Guide (https://github.com/HackSoftware/Django-Styleguide), by providing a few management commands:
