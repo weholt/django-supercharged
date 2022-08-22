@@ -1,10 +1,12 @@
 from dataclasses import dataclass, field
 from enum import Enum, auto
 from inspect import isclass
-from typing import Dict
+from typing import Dict, Generic, TypeVar
 
 from django.contrib import messages
 from django.shortcuts import render
+
+T = TypeVar("T")
 
 
 class ServiceProcessStatus(Enum):
@@ -18,27 +20,22 @@ class ServiceProcessStatus(Enum):
 
 
 @dataclass
-class ServiceProcessResult:
+class ServiceProcessResult(Generic[T]):
     """
     The result of a service process.
     """
 
+    payload: T | None
     message: str = ""
     status: ServiceProcessStatus = ServiceProcessStatus.UNPROCESSED
-    payload: Dict = field(default_factory=dict)
-    product: object = None
 
     @classmethod
-    def produce(cls, product: object = None, message: str = ""):
-        return cls(message=message, status=ServiceProcessStatus.OK, product=product)
-
-    @classmethod
-    def processed(cls, payload: Dict = {}, message: str = ""):
+    def processed(cls, payload: T, message: str = ""):
         return cls(message=message, status=ServiceProcessStatus.OK, payload=payload)
 
     @classmethod
     def failed(cls, message: str = ""):
-        return cls(message=message, status=ServiceProcessStatus.FAILED)
+        return cls(message=message, status=ServiceProcessStatus.FAILED, payload=None)
 
     @property
     def success(self):
